@@ -6,7 +6,7 @@
  * @ap: list of arguments
  * Return: total len of argument with the total len of string
  **/
-int parser(const char *format, va_list ap)
+int parser(const char *format, va_list md)
 {
 	int len, i, dm;
 
@@ -15,7 +15,7 @@ int parser(const char *format, va_list ap)
 	{
 		if (format[i] == '%')
 		{
-			dm = percent_parser(format, ap, &i);
+			dm = percent_parser(format, md, &i);
 			if (dm == -1)
 				return (-1);
 
