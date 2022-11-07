@@ -8,19 +8,19 @@
 
 /**
  * struct to_format - typedef struct
- * @specifier: form
+ * @specify: form
  * @f: function associated
  **/
 typedef struct to_format
 {
-	char specifier;
+	char specify;
 	int (*f)(va_list);
 } format;
 
 /* _printf */
 int _printf(const char *, ...);
 
-/* parsers */
+/* handler */
 int parser(const char *, va_list);
 int percent_parser(const char *, va_list, int *);
 
