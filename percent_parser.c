@@ -7,7 +7,7 @@
  * @i: iterator
  * Return: the number of characters printed
  **/
-int percent_parser(const char *format, va_list ap, int *i)
+int percent_parser(const char *format, va_list md, int *i)
 {
 	int len, j;
 
@@ -32,7 +32,7 @@ int percent_parser(const char *format, va_list ap, int *i)
 	{
 		if (format[*i] == formats[j].specifier)
 		{
-			len = formats[j].f(ap);
+			len = formats[j].f(md);
 			return (len);
 		}
 
