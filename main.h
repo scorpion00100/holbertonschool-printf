@@ -15,7 +15,7 @@ typedef struct to_format
 {
 	char specify;
 	int (*f)(va_list);
-} format;
+} the_format;
 
 /* _printf */
 int _printf(const char *, ...);
