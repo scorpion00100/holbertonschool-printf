@@ -11,7 +11,7 @@ int percent_parser(const char *format, va_list md, int *i)
 {
 	int len, j;
 
-	to_format formats[] = {
+	the_format formats[] = {
 		{'c', print_char}, {'s', print_string},
 		{'d', print_integer}, {'i', print_integer},
 		{'\0', NULL}
