@@ -3,7 +3,7 @@
 /**
  * parser - format controll
  * @format: string format
- * @ap: list of arguments
+ * @md: list of arguments
  * Return: total len of argument with the total len of string
  **/
 int parser(const char *format, va_list md)
