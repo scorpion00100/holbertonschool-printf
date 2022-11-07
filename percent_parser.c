@@ -3,7 +3,7 @@
 /**
  * percent_parser - controll percent format
  * @format: the parser format
- * @ap: list of arguments
+ * @md: list of arguments
  * @i: iterator
  * Return: the number of characters printed
  **/
@@ -28,9 +28,9 @@ int percent_parser(const char *format, va_list md, int *i)
 		return (1);
 	}
 
-	for (len = j = 0; formats[j].specifier; j++)
+	for (len = j = 0; formats[j].specify; j++)
 	{
-		if (format[*i] == formats[j].specifier)
+		if (format[*i] == formats[j].specify)
 		{
 			len = formats[j].f(md);
 			return (len);
