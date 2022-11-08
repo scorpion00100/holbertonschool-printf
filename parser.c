@@ -39,10 +39,11 @@ int parser(const char *format, va_list md)
  **/
 int percent_parser(const char *format, va_list md, int *i)
 {
-	int len, j; n_formats;
+	int len, j, n_formats;
 
 	the_format formats[] = {
 		{'c', print_char}, {'s', print_string},
+		{'d', print_integer}, {'i', print_integer},
 		{'\0', NULL}
 	};
 
