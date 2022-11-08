@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	unsigned int len;
 	va_list md;
 
-	if (!format)
+	if (format == NULL)
 		return (-1);
 
 	len = strlen(format);
