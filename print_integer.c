@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * is_integer - Print a number in base 10
- * @ap: Number to print in base 10
+ * print_integer - Print a number in base 10
+ * @md: Number to print in base 10
  * Return: Length of th numbers in decimal
  **/
 int print_integer(va_list md)
