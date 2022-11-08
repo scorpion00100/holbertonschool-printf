@@ -3,7 +3,7 @@
 /**
  * print_string - print a str
  * @md: value of list
- * Return: len of string
+ * Return: lenght of string
  */
 
 int print_string(va_list md)
