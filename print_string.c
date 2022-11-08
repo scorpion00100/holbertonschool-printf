@@ -18,4 +18,4 @@ int print_string(va_list md)
 	for (len = 0; s[len] != '\0'; len++)
 		_putchar(s[len]);
 	return (len);
-
+}
