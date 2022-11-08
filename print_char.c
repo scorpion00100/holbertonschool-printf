@@ -3,7 +3,7 @@
 /**
  * print_char - function that prints characters
  * @md: variadic list
- * Return: 1 if not error
+ * Return: one if not error
  */
 
 int print_char(va_list md)
