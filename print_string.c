@@ -8,11 +8,11 @@
 
 int print_string(va_list md)
 {
-	char *s = NULL;
+	char *s;
 	int len;
 
 	s = va_arg(md, char*);
-	if (!s)
+	if (s != NULL)
 		s = "(null)";
 
 	for (len = 0; s[len] != '\0'; len++)
