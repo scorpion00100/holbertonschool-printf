@@ -5,6 +5,7 @@
 #include <stdarg.h>
 #include <string.h>
 #include <stddef.h>
+#include <unistd.h>
 
 /**
  * struct to_format - typedef struct
@@ -20,17 +21,22 @@ typedef struct to_format
 /* _printf */
 int _printf(const char *, ...);
 
-/* handler */
+/* gestionnar */
 int parser(const char *, va_list);
 int percent_parser(const char *, va_list, int *);
 
 /* print_functions */
-int _putchar(char c);
 int print_char(va_list);
 int print_string(va_list);
 int print_integer(va_list);
 
+/* some help */
+int _putchar(char);
+int buffer(char);
+
 /* help_func */
 char *itoa(long int num, int base);
+int _strlen(const char *);
+int print(char *);
 
 #endif
