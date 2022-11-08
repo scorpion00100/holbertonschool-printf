@@ -54,7 +54,7 @@ int percent_parser(const char *format, va_list md, int *i)
 
 	if (format[*i] == '%')
 	{
-		putchar('%');
+		_putchar('%');
 		return (1);
 	}
 
