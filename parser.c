@@ -23,9 +23,53 @@ int parser(const char *format, va_list md)
 			continue;
 		}
 
-		putchar(format[i]);
-		len += 1;
+		_putchar(format[i]);
+		len = len + 1;
 	}
 
 	return (len);
+}
+
+/**
+ * percent_parser - controll percent format
+ * @format: the parser format
+ * @md: list of arguments
+ * @i: iterator
+ * Return: the number of characters printed
+ **/
+int percent_parser(const char *format, va_list md, int *i)
+{
+	int len, j; n_formats;
+
+	the_format formats[] = {
+		{'c', print_char}, {'s', print_string},
+		{'\0', NULL}
+	};
+
+	*i = *i + 1;
+
+	if (format[*i] == '\0')
+		return (-1);
+
+	if (format[*i] == '%')
+	{
+		putchar('%');
+		return (1);
+	}
+
+	n_formats = sizeof(formats) / sizeof(formats[0]);
+	for (len = j = 0; j < n_formats; j++)
+	{
+		if (format[*i] == formats[j].specify)
+		{
+			len = formats[j].f(md);
+			return (len);
+		}
+
+	}
+
+	_putchar('%');
+	_putchar(format[*i]);
+
+	return (2);
 }
