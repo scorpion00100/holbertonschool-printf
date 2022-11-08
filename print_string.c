@@ -13,7 +13,7 @@ int print_string(va_list md)
 
 	s = va_arg(md, char*);
 	if (!s)
-		s = "null";
+		s = "(null)";
 
 	for (len = 0; s[len] != '\0'; len++)
 		_putchar(s[len]);
