@@ -3,7 +3,7 @@
 /**
  * parser - format controll
  * @format: string format
- * @md: list of arguments
+ * @md: list all arguments
  * Return: total len of argument with the total len of string
  **/
 int parser(const char *format, va_list md)
@@ -24,18 +24,18 @@ int parser(const char *format, va_list md)
 		}
 
 		_putchar(format[i]);
-		len = len + 1;
+		len += 1;
 	}
 
 	return (len);
 }
 
 /**
- * percent_parser - controll percent format
- * @format: the parser format
- * @md: list of arguments
- * @i: iterator
- * Return: the number of characters printed
+ * percent_parser - controll percent_format
+ * @format: analyse_format
+ * @md: list all arguments
+ * @i: iterating
+ * Return: number of char printed
  **/
 int percent_parser(const char *format, va_list md, int *i)
 {
