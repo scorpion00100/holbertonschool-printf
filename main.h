@@ -18,14 +18,14 @@ typedef struct to_format
 	int (*f)(va_list);
 } the_format;
 
-/* _printf */
+/* _printf_ func */
 int _printf(const char *, ...);
 
 /* gestionnar */
 int parser(const char *, va_list);
 int percent_parser(const char *, va_list, int *);
 
-/* print_functions */
+/* print_func */
 int print_char(va_list);
 int print_string(va_list);
 int print_integer(va_list);
