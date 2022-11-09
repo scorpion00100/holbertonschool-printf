@@ -1,21 +1,21 @@
 #include "main.h"
 
 /**
- * print_integer - Print a number in base 10
- * @md: Number to print in base 10
- * Return: Length of th numbers in decimal
+ * print_integer - print a number in base 10
+ * @md: num to print in base 10
+ * Return: len of num in decimal
  **/
 int print_integer(va_list md)
 {
-	char *str = NULL;
-	int count = 0;
+	char *s = NULL;
+	int n;
 
-	str = itoa(va_arg(md, int), 10);
-	if (!str)
-		str = NULL;
+	s = itoa(va_arg(md, int), 10);
+	if (!s)
+		s = NULL;
 
-	for ( ; str[count] != '\0'; count++)
-		putchar(str[count]);
+	for (n = 0 ; s[n] != '\0'; n++)
+		_putchar(s[n]);
 
-	return (count);
+	return (n);
 }
