@@ -2,7 +2,7 @@
 
 /**
  * print_char - function that prints characters
- * @md: variadic list
+ * @md: variadic list of the function
  * Return: one if not error
  */
 
