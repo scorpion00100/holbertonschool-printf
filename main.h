@@ -36,7 +36,4 @@ int buffer(char);
 
 /* help_func */
 char *itoa(long int num, int base);
-int _strlen(const char *);
-int print(char *);
-
 #endif
